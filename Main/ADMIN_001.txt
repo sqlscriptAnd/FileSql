@@ -1,7 +1,7 @@
 CREATE TABLE ADMIN
 (
 ADMID int NOT NULL AUTO_INCREMENT,
-USRNAM varchar(255),
+USERNAME varchar(255),
 PWD varchar(255),
 FNAME varchar(255),
 LNAME varchar(255),
