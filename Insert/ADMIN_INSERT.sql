@@ -1,3 +1,3 @@
 INSERT INTO ADMIN (USERNAME,PWD,FNAME,LNAME,POSITION)
-VALUES ('admin','admin2','Nattachai','Summart','Customer');
+VALUES ('admin','admin6','Nattachai','Summart','Customer');
 
