@@ -1,11 +1,8 @@
 INSERT INTO ADMIN (USERNAME,PWD,FNAME,LNAME,POSITION)
-VALUES ('admin','admin','Nattachai','Summart','Customer');
+VALUES ('admin','admin','admin','admin','Admin');
 
 INSERT INTO ADMIN (USERNAME,PWD,FNAME,LNAME,POSITION)
-VALUES ('admin6','admin4','Nattachai','Summart','Customer');
+VALUES ('arm','123456','Nattachai','Summart','Manager');
 
 INSERT INTO ADMIN (USERNAME,PWD,FNAME,LNAME,POSITION)
-VALUES ('arm','123456','Nattachai','Summart','Customer');
-
-INSERT INTO ADMIN (USERNAME,PWD,FNAME,LNAME,POSITION)
-VALUES ('nattachai','123','Nattachai','Summart','Chief');
+VALUES ('big','123456','KuyBig','ChengSus','Customer');
