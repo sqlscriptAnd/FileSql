@@ -3,9 +3,10 @@ $response = array();
 require_once 'connectDB.php';
 // connecting to db
 $db = new DB_CONNECT();
-if (isset($_GET["admid"])){
-	 $user_id = $_GET['admid'];	 
-	 $result = mysql_query("SELECT * FROM ADMIN WHERE admid = '$user_id'");
+
+if (isset($_POST["userName"])){
+	 $userName = $_POST['userName'];	 
+	 $result = mysql_query("SELECT * FROM ADMIN WHERE USERNAME = '$userName'")  or die(mysql_error());
 	 
 	  if (!empty($result)) {
 		   // check for empty result
@@ -13,11 +14,12 @@ if (isset($_GET["admid"])){
 			 $result = mysql_fetch_array($result);
  
             $member = array();
-            $member["userId"] = $result["admid"];
-			$member["pwd"] = $result["pwd"];
-            $member["fname"] = $result["fname"];
-            $member["lname"] = $result["lname"];           
-            $member["position"] = $result["position"];
+            $member["userId"] = $result["ADMID"];
+			$member["username"] = $result["USERNAME"];
+			$member["pwd"] = $result["PWD"];
+            $member["fname"] = $result["FNAME"];
+            $member["lname"] = $result["LNAME"];           
+            $member["position"] = $result["POSITION"];
             // success
             $response["success"] = 1;
  
@@ -32,7 +34,7 @@ if (isset($_GET["admid"])){
 		else {
             // no product found
             $response["success"] = 0;
-            $response["message"] = "No product found";
+            $response["message"] = "Data No found1  Post<".$_POST["userName"]." >";
  
             // echo no users JSON
             echo json_encode($response);
@@ -41,7 +43,7 @@ if (isset($_GET["admid"])){
 	  else {
         // no product found
         $response["success"] = 0;
-        $response["message"] = "No product found";
+        $response["message"] = "Data No found2 Post<".$_POST["userName"]." >";
  
         // echo no users JSON
         echo json_encode($response);

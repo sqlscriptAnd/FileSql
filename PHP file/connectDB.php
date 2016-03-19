@@ -16,11 +16,10 @@ class DB_CONNECT{
 	function connect(){
 		
 		// import database connection variables
-		require_once 'config.php';
-		
+		require_once 'configDB.php';
 		// Connecting to mysql database
-		$con = mysql_connect(DB_SERVER, DB_USER, DB_PASSWORD) or die(mysql_error());
-		
+		$con = mysql_connect(DB_SERVER,DB_USER,DB_PASSWORD) or die(mysql_error());
+		mysql_select_db(DB_DATABASE);
 		// returing connection cursor
         return $con;
 	}
